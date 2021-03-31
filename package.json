@@ -15,6 +15,7 @@
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "start:prod": "node dist/main.js"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
