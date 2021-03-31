@@ -72,7 +72,7 @@
     "webRtcTransport": {
       "listenIps": [
         {
-          "ip": "192.168.0.102",
+          "ip": "192.168.29.231",
           "announcedIp": null
         }
       ],

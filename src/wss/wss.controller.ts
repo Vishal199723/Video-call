@@ -3,12 +3,24 @@ import { Controller, Get, Param } from '@nestjs/common';
 import pidusage from 'pidusage';
 
 import { throwNOTFOUND } from '../common/errors';
+import { AppService } from './AppService';
 
 import { WssGateway } from './wss.gateway';
 
 @Controller('websocket')
 export class WssController {
-  constructor(private readonly wssGateway: WssGateway) {}
+  constructor(private readonly wssGateway: WssGateway,private appService : AppService) {}
+
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
+
+  @Get('test')
+  test(): string {
+    return "test";
+  }
 
   @Get('workers/stats')
   public async workersStats() {

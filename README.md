@@ -50,7 +50,7 @@ npm run start:prod
 ```json
   "listenIps": [
     {
-      "ip": "192.168.2.239", // your ip
+      "ip": "192.168.0.78", // your ip
       "announcedIp": null
     }
   ],

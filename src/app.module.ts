@@ -8,10 +8,11 @@ import { LoggerModule } from './logger/logger.module';
 import { HealthcheckModule } from './healthcheck/healthcheck.module';
 
 import { WssModule } from './wss/wss.module';
+import { AppService } from './wss/AppService';
 
 @Module({
   imports: [LoggerModule, HealthcheckModule, WssModule],
-  providers: [],
+  providers: [AppService],
   controllers: [],
 })
 export class AppModule implements NestModule {
